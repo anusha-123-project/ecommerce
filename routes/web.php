@@ -30,6 +30,7 @@ Route::get('/edit-products/{id}',[ProductController::class,'edit']);
 Route::put('/admin/update-product/{id}', [ProductController::class, 'update'])->name('admin.update.products');
 Route::post('/admin/delete-image', [ProductController::class, 'deleteImage'])->name('admin.delete.image');
 Route::get('/delete-products/{id}', [ProductController::class, 'deleteProduct'])->name('admin.delete.product');
+Route::get('admin-logout',[LoginController::class,'logout']);
 
 // users
 Route::get('/Userregistration', [RegisterController::class, 'showSignUpForm'])->name('signup');
